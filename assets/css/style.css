@@ -1,0 +1,49 @@
+:root {
+    --cor-corpo:#1D232A;
+    --cor-cabecalho: #1D232A;
+    --cor-cabecalho-mobile:#15191C;
+    --cor-menu-lateral:#15191C;
+    --cor-cartao: #2C343A;
+    --fonte-principal:#FFFFFF;
+    --fonte-alternativa:#95999C;
+    --cor-links:#0480DC;
+    --cor-botao:#0480DC;
+}
+
+@font-face {
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
+}
+
+body {
+    background: var(--cor-corpo);
+    font-family: 'Open Sans', 'icones', sans-serif;
+    color: var(--fonte-principal);
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cor-cabecalho-mobile);
+    padding: 8px 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
+
+/* Adição de ícones no menu */
+
+.cabecalho__menu i::before {
+    content: "\e904";
+    font-size: 24px;
+}
+
+.cabecalho__notificacao i::before {
+    content: "\e906";
+    font-size: 24px;
+}
+
+.cabecalho__logo{
+    width: 40px;
+}
