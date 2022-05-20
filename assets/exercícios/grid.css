@@ -19,7 +19,7 @@ Substitua essas propriedades margin por novas propriedades do grid. */
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 16px;
-
+    
 }
 
 .cabecalho {
@@ -29,6 +29,7 @@ Substitua essas propriedades margin por novas propriedades do grid. */
     min-height: 50px;
     /* margin: 8px; */
     grid-column: span 4;
+ 
 }
 
 .lateral {
@@ -37,7 +38,9 @@ Substitua essas propriedades margin por novas propriedades do grid. */
     min-width: 50px;
     min-height: 50px;
     /* margin: 8px; */
-    grid-row: span 3;
+    grid-column: 4;
+    grid-row: 1/span 3;
+    
 }
 
 .meio {
@@ -47,7 +50,7 @@ Substitua essas propriedades margin por novas propriedades do grid. */
     min-height: 50px;
     /* margin: 8px; */
     grid-column: span 2;
-    grid-row: span 3;
+    grid-row: 1/ span 3;
 }
 
 .direita-cima {
@@ -56,6 +59,8 @@ Substitua essas propriedades margin por novas propriedades do grid. */
     min-width: 50px;
     min-height: 50px;
     /* margin: 8px; */
+    grid-column: 1;
+    grid-row: 3;
 }
 
 .direita-baixo {
@@ -64,5 +69,6 @@ Substitua essas propriedades margin por novas propriedades do grid. */
     min-width: 50px;
     min-height: 50px;
     /* margin: 8px; */
-    grid-row: span 2;
+    grid-row: 1 / span 2;
+    grid-column: 1;
 }
