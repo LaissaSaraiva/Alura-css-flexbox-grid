@@ -206,6 +206,7 @@ body {
 .titulo__pagina{
     font-size: 1.5rem;
     font-weight: bold;
+    
 }
 
 
@@ -216,8 +217,51 @@ body {
         column-gap: 32px;
         padding: 16px 60px;
         grid-column: 2;
+        grid-template-areas:
+            " titulo__pagina titulo__pagina titulo__pagina"
+            " destaque-video destaque-video videos-recentes"
+            " secao-videos secao-videos secao-videos"
+            " produtos-recentes destaque-produto destaque-produto"
+            "secao-produtos secao-produtos secao-produtos"
     }
+
+    /* Grids Areas - Desktop*/
+
+    .titulo-secao{
+        grid-column: span 4;
+    }
+
+    .titulo__pagina{
+        grid-area: titulo__pagina;
+    }
+   
     
+
+    .destaque-video {
+        grid-area: destaque-video;
+
+    }
+
+    .videos-recentes{
+        grid-area: videos-recentes;
+    }
+
+    .secao-videos {
+        grid-area: secao-videos;
+    }
+
+    .destaque-produto {
+        grid-area: destaque-produto;
+    }
+
+    .produtos-recentes {
+        grid-area: produtos-recentes;
+    }
+
+    .secao-produtos{
+        grid-area: secao-produtos;
+    }
+
 }
 
 /* Cartões */
@@ -226,6 +270,10 @@ body {
     border-radius: 15px;
     overflow: hidden;
     background-color: var(--cor-cartao);
+}
+
+.cartao__imagem--desktop{
+    display:none;
 }
 
 .cartao--destaque {
@@ -309,7 +357,29 @@ body {
     display: none;
 }
 
+
+/* Media Query cartões */
+
 @media screen and (min-width:1280px) {
+
+    .cartao--destaque {
+        margin-bottom: 0;
+    }
+
+    .cartao__imagem--mobile{
+        display:none;
+    }
+    
+
+    .cartao__imagem--desktop{
+        display:block;
+    }
+    
+    .cartao__botao--destaque{
+        grid-column: auto;
+        padding: 16px 8px;
+    }
+
     .cartao--recentes{
         display: grid;
         grid-template-columns: auto auto;
@@ -318,6 +388,7 @@ body {
         width: 256px;
         padding: 16px;
         box-sizing: border-box;
+        align-self: flex-start;
     }
     
     .cartao--recentes .cartao__titulo {
@@ -369,4 +440,10 @@ body {
 .titulo-secao{
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+@media screen and (min-width:1280px) {
+    .secao {
+        grid-template-columns: repeat(4, 1fr);  
+    }    
 }
